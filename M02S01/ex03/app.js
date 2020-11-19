@@ -29,7 +29,7 @@ let Car = {
   },
   flashLights: function () {
     this.turnLightsOn();
-    setTimeout(turnLightsOff, 1000 * 3);
+    setTimeout(this.turnLightsOff, 1000 * 3);
     // 10 * 24 * 60 * 60 * 1000
   },
 };
