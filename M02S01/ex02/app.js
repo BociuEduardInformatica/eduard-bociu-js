@@ -63,15 +63,15 @@ class Bicycle extends Vehicle {
     super(make, color, 2, speed, topSpeed, 0);
   }
 
-  // decelerate() {
-  //   // let speed = this.speed--;
-  //   // if (speed < 0) {}
-  //   if (--this.speed < this.topReverseSpeed) {
-  //     this.speed = this.topReverseSpeed;
-  //   }
+  decelerate() {
+    // let speed = this.speed--;
+    // if (speed < 0) {}
+    if (--this.speed < this.topReverseSpeed) {
+      this.speed = this.topReverseSpeed;
+    }
 
-  //   this.displaySpeed();
-  // }
+    this.displaySpeed();
+  }
 }
 
 // Instantiaza o bicicleta
