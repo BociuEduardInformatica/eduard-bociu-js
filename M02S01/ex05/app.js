@@ -53,9 +53,9 @@ class Shape {
 
 class Rectangle extends Shape {
   constructor(posX, posY, width, height, color, borderColor) {
-    this.htmlContainer.classList.add('shape--rectangle');
-
     super(posX, posY, width, height, color, borderColor);
+
+    this.htmlContainer.classList.add('shape--rectangle');
   }
 }
 
