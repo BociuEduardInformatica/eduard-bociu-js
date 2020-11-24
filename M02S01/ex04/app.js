@@ -40,7 +40,7 @@ class Car {
   }
 
   changeColor(object, color = '#000') {
-    if (!this.hasOwnProperty(object) || object.nodeName === undefined) {
+    if (!this.hasOwnProperty(object) || this[object].nodeName === undefined) {
       console.warn(`Nu am gasit obiectul ${object} pe aceasta instanta.`);
 
       return;
