@@ -12,6 +12,7 @@ class Shape {
 
   setPosX(x) {
     this.posX = x;
+    this.htmlContainer.style.left = `${x}px`;
   }
 
   setPosY(y) {
@@ -61,9 +62,10 @@ class Rectangle extends Shape {
 
 class Circle extends Shape {
   constructor(posX, posY, radius, color, borderColor) {
-    super(posX, posY, radius, radius, color, borderColor);
+    super(posX, posY, radius * 2, radius * 2, color, borderColor);
 
-    this.borderRadius = this.setBorderRadius(radius);
+    this.borderRadius = this.setBorderRadius('50%');
+    this.htmlContainer.classList.add('shape--circle');
   }
 
   setBorderRadius(br) {
