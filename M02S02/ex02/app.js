@@ -43,11 +43,17 @@ $(document).ready(() => {
     const $skillsUl = createSkillUl();
     const $skillLi = $('<li>', {
       text: value,
-    }).append(
-      $('<button>', {
-        text: '-',
-      }),
-    );
+    })
+      .append(
+        $('<button>', {
+          text: '-',
+        }),
+      )
+      .append(
+        $('<button>', {
+          text: 'Edit',
+        }),
+      );
 
     $skillsUl.append($skillLi);
 
