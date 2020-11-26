@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Person Form</title>        
+  <meta charset="utf-8">
+  <title>Person Form</title>
 </head>
+
 <body>
   <form id="personForm">
     <fieldset>
       <legend>Persoana</legend>
       <label for="name">Nume:</label>
-      <input type="text" name="name"> 
-        
+      <input
+        type="text"
+        name="name"
+      >
+
       <br><br>
 
       <label for="surname">Prenume:</label>
-      <input type="text" name="surname"> 
+      <input
+        type="text"
+        name="surname"
+      >
 
       <br><br>
 
       <label for="age">Varsta</label>
-      <input type="text" name="age">    
-      
+      <input
+        type="text"
+        name="age"
+      >
+
       <br><br>
 
       <button type="submit">Adauga</button>
@@ -28,10 +39,18 @@
 
     <fieldset>
       <legend>Detalii</legend>
+      <input
+        type="text"
+        name="skills"
+        id="skills"
+        placeholder="Skills"
+      >
+      <button type="button">+</button>
     </fieldset>
   </form>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
