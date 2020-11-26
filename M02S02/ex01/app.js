@@ -32,3 +32,37 @@ $body.append($p1);
 setTimeout(() => {
   $p1.addClass('error');
 }, 5000);
+
+// Selecteaza paragraful anterior (#myParagraph) si schimba textul sau in
+// textul: “Am schimbat dinamic acest paragraf.” Folosind metoda .text()
+// https://api.jquery.com/text/
+// Creeaza un element de tip span cu idul example si cu textul
+// “ParolaMea” si adauga-l la cel de-al doilea paragraf folosind metoda .appendTo()
+// Creeaza un element de tip h2 cu textul “Mesaje” si adauga-l
+// la inceputul div-ului cu clasa container folosind metoda .prependTo()
+// https://api.jquery.com/prependTo/
+
+//js
+let message = 'Am schimbat dinamic acest paragraf.';
+// document.getElementById('myParagraph').innerText = message;
+// jQuery
+$('#myParagraf').text(message);
+
+$('<span>', {
+  id: 'example',
+  text: 'ParolaMea',
+}).appendTo($p1);
+
+let span = document.createElement('span');
+span.id = 'example2';
+span.innerText = 'Parola Ta';
+$p1[0].append(span);
+
+$('<h2>', {
+  text: 'Mesage',
+}).prependTo('.container');
+// .prependTo($('.container'))
+
+let h2 = document.createElement('h2');
+h2.innerText = 'Message 2';
+document.querySelector('.container').prepend(h2);
