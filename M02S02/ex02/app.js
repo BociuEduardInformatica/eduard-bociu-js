@@ -87,8 +87,7 @@ const createSkillUl = () => {
   return $ul;
 };
 
-const createPersonDetails = () => {
-  const detailsId = 'person-details';
+const createCreatureDetails = (detailsId) => {
   let $p = $(`#${detailsId}`);
 
   if ($p.length < 1) {
@@ -148,7 +147,7 @@ $(document).ready(() => {
       }
     });
 
-    $personDetails = createPersonDetails();
+    $personDetails = createCreatureDetails('person-details');
     let message = `
       Numele meu este ${userData[0].value} ${userData[1].value} si am ${userData[2].value} ani.
     `;
@@ -181,5 +180,11 @@ $(document).ready(() => {
         return false;
       }
     });
+
+    $petDetails = createCreatureDetails('pet-details');
+    let message = `
+      Animalul se numeste ${petData[0].value} este ${petData[1].value} si are ${petData[2].value} ani.
+    `;
+    $petDetails.text(message);
   });
 });
