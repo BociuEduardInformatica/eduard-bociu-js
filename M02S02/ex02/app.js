@@ -156,4 +156,30 @@ $(document).ready(() => {
 
     event.preventDefault();
   });
+
+  // pt form elements, -> mai bine change
+  $('#pet-checkbox').on('change', function () {
+    const checked = $(this).is(':checked');
+    const $petFieldset = $(this).parent().next();
+
+    if (checked === true) {
+      $petFieldset.slideDown();
+    } else {
+      $petFieldset.slideUp();
+    }
+  });
+
+  $('#add-pet').on('click', () => {
+    $form = $(`#${formId}`);
+    const data = $form.serializeArray();
+    const desiredKeys = ['pet-name', 'pet-species', 'pet-age'];
+
+    const petData = data.filter((key) => {
+      if (desiredKeys.includes(key.name)) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  });
 });

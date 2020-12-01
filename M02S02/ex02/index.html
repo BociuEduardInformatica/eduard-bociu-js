@@ -48,11 +48,15 @@
       <button type="button">+</button>
     </fieldset>
 
-    <input
-      type="checkbox"
-      id="pet-checkbox"
-    >
-    <fieldset>
+    <div>
+      <input
+        type="checkbox"
+        id="pet-checkbox"
+        name="pet-checkbox"
+      ><label for="pet-checkbox">Are animale de casa</label>
+    </div>
+
+    <fieldset style="display: none;">
       <legend>Animale de case</legend>
       <input
         type="text"
@@ -79,6 +83,8 @@
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app.js"></script>
+
+
 </body>
 
 </html>
