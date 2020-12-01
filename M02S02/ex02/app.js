@@ -32,6 +32,7 @@ const formId = 'personForm';
 const createSkillUl = () => {
   const ulId = 'skills-list';
   let $ul = $(`#${ulId}`);
+  let editMode = false;
 
   if ($ul.length !== 1) {
     $ul = $('<ul>', {
@@ -47,8 +48,38 @@ const createSkillUl = () => {
     });
 
     $ul.on('click', '.edit', (event) => {
+      if (editMode === true) {
+        return;
+      }
+      editMode = true;
+
       const $element = $(event.currentTarget);
       const $parentLi = $element.parent();
+      const $widget = createTextCaptureInput('Modifica numele skillului.');
+
+      $parentLi.prepend($widget);
+    });
+
+    $ul.on('click', '.text-widget .cancel', (event) => {
+      editMode = false;
+      // nu asa se face:
+      // $(.text-widget).remove()
+      // event.currentTarget.parentElement.remove();
+
+      $(event.currentTarget).parent().remove();
+    });
+
+    $ul.on('click', '.text-widget .save', function () {
+      $saveButton = $(this);
+      // let value = this.previousElementSibling.value;
+      let value = $saveButton.prev().val();
+      let $parentLi = $saveButton.parents('li');
+
+      // $parentLi.children('.skill-text')
+      $parentLi.find('.skill-text').text(value);
+
+      editMode = false;
+      $saveButton.parent().remove();
     });
   }
 
