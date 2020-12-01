@@ -1,3 +1,33 @@
+const createTextCaptureInput = (placeholder = 'Adauga o valoare') => {
+  const $widget = $('<div>', {
+    class: 'text-widget',
+  });
+
+  $widget
+    .append(
+      $('<input>', {
+        type: 'text',
+        placeholder,
+      }),
+    )
+    .append(
+      $('<button>', {
+        type: 'button',
+        text: 'Salveaza',
+        class: 'save',
+      }),
+    )
+    .append(
+      $('<button>', {
+        type: 'button',
+        text: 'Renunta',
+        class: 'cancel',
+      }),
+    );
+
+  return $widget;
+};
+
 const formId = 'personForm';
 const createSkillUl = () => {
   const ulId = 'skills-list';
@@ -10,10 +40,15 @@ const createSkillUl = () => {
 
     $(`#${formId}`).after($ul);
 
-    $ul.on('click', 'button', (event) => {
+    $ul.on('click', '.delete', (event) => {
       const $element = $(event.currentTarget);
 
       $element.parent().remove();
+    });
+
+    $ul.on('click', '.edit', (event) => {
+      const $element = $(event.currentTarget);
+      const $parentLi = $element.parent();
     });
   }
 
@@ -41,17 +76,24 @@ $(document).ready(() => {
   $skillInput.next().on('click', () => {
     const value = $skillInput.val(); // DOM -> elem.value
     const $skillsUl = createSkillUl();
-    const $skillLi = $('<li>', {
-      text: value,
-    })
+    const $skillLi = $('<li>')
+      .append(
+        $('<span>', {
+          class: 'skill-text',
+          text: value,
+        }),
+      )
       .append(
         $('<button>', {
           text: '-',
+          class: 'delete',
+          // skill__button
         }),
       )
       .append(
         $('<button>', {
           text: 'Edit',
+          class: 'edit',
         }),
       );
 
