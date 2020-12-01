@@ -44,6 +44,7 @@ const createSkillUl = () => {
     $ul.on('click', '.delete', (event) => {
       const $element = $(event.currentTarget);
 
+      editMode = false;
       $element.parent().remove();
     });
 
