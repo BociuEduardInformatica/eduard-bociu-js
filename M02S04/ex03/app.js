@@ -5,8 +5,8 @@ const heroPosition = {
   top: 0,
 };
 
-const moveHero = (axis) => {
-  let step = 30;
+const moveHero = (axis = 'x', normalizedDirection = 'fw') => {
+  let step = normalizedDirection === 'fw' ? 30 : -30;
   let cssProperty = axis === 'x' ? 'left' : 'top';
 
   heroPosition[cssProperty] += step;
@@ -33,6 +33,15 @@ controls.addEventListener('click', (event) => {
       break;
     case 'left':
       axis = 'x';
+      normalizedDirection = 'bk';
+      moveHero(axis, normalizedDirection);
+      break;
+    case 'down':
+      axis = 'y';
+      moveHero(axis, normalizedDirection);
+      break;
+    case 'up':
+      axis = 'y';
       normalizedDirection = 'bk';
       moveHero(axis, normalizedDirection);
       break;
