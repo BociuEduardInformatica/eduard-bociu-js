@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Person Form</title>        
+  <meta charset="utf-8">
+  <title>Person Form</title>
 </head>
+
 <body>
   <form id="personForm">
     <fieldset>
       <legend>Persoana</legend>
       <label for="name">Nume:</label>
-      <input type="text" name="name"> 
-        
+      <input
+        type="text"
+        name="name"
+      >
+
       <br><br>
 
       <label for="surname">Prenume:</label>
-      <input type="text" name="surname"> 
+      <input
+        type="text"
+        name="surname"
+      >
 
       <br><br>
 
       <label for="age">Varsta</label>
-      <input type="text" name="age">    
-      
+      <input
+        type="text"
+        name="age"
+      >
+
       <br><br>
 
       <button type="submit">Adauga</button>
@@ -28,10 +39,52 @@
 
     <fieldset>
       <legend>Detalii</legend>
+      <input
+        type="text"
+        name="skills"
+        id="skills"
+        placeholder="Skills"
+      >
+      <button type="button">+</button>
+    </fieldset>
+
+    <div>
+      <input
+        type="checkbox"
+        id="pet-checkbox"
+        name="pet-checkbox"
+      ><label for="pet-checkbox">Are animale de casa</label>
+    </div>
+
+    <fieldset style="display: none;">
+      <legend>Animale de case</legend>
+      <input
+        type="text"
+        name="pet-name"
+        placeholder="Nume animal"
+      > <br>
+      <input
+        type="text"
+        name="pet-species"
+        placeholder="Rasa animal"
+      > <br>
+      <input
+        type="text"
+        name="pet-age"
+        placeholder="Varsta animal"
+      > <br>
+
+      <button
+        type="button"
+        id="add-pet"
+      >Adauga animal</button>
     </fieldset>
   </form>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app.js"></script>
+
+
 </body>
+
 </html>

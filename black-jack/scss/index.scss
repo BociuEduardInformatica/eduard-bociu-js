@@ -1,0 +1,11 @@
+@import './../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  background: url('../img/body-texture.jpg') #0f0;
+}
+
+@import './reset';
+
+@import './seat';
+@import './card';
+@import './hand';
