@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title>CSS animation in JavaScript</title>    
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      
-      body {
-        padding: 20px;
-      }
+  <meta charset="utf-8" />
+  <title>CSS animation in JavaScript</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      .stage {
-        width: 750px;
-        height: 450px;
-        border: 1px solid #000;
-        position: relative;
-      }
+    body {
+      padding: 20px;
+    }
 
-      .controls {
-      margin: 25px 0 0 0; 
-      padding: 15px;
-      width: 750px; 
-      height: auto; 
+    .stage {
+      width: 750px;
+      height: 450px;
       border: 1px solid #000;
-      }
+      position: relative;
+    }
 
-      .controls button {
-        font-size: 27px;
-        cursor: pointer;
-      }
+    .controls {
+      margin: 25px 0 0 0;
+      padding: 15px;
+      width: 750px;
+      height: auto;
+      border: 1px solid #000;
+    }
 
-      .row {
-        text-align: center;
-      }
+    .controls button {
+      font-size: 27px;
+      cursor: pointer;
+    }
 
-      .hero {
-        width: 45px;
-        height: 45px;
-        background-color: #000;
-      }
-    </style>
+    .row {
+      text-align: center;
+    }
+
+    .hero {
+      width: 45px;
+      height: 45px;
+      background-color: #000;
+      position: absolute;
+      transition: top 0.3s linear, left 0.3s linear;
+    }
+  </style>
 </head>
+
 <body>
-  
+
   <div class="stage">
     <div class="hero"></div>
   </div>
 
   <div class="controls">
     <div class="row">
-      <button>⬆️</button>
+      <button id="key-up">⬆️</button>
     </div>
     <div class="row">
-      <button>⬅️</button> &nbsp; &nbsp;
-      <button>➡️</button>
+      <button id="key-left">⬅️</button> &nbsp; &nbsp;
+      <button id="key-right">➡️</button>
     </div>
     <div class="row">
-      <button>⬇️</button>
+      <button id="key-down">⬇️</button>
     </div>
   </div>
 
   <script src="app.js"></script>
 </body>
+
 </html>
