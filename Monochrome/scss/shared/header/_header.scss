@@ -1,0 +1,176 @@
+.user-navigation {
+  @include media-breakpoint-up('md') {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.header-contact {
+  @include media-breakpoint-up('md') {
+    display: inline-block;
+    margin-top: 40px;
+
+    ul {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+
+        a {
+          color: $brand-main;
+          font-size: 20px;
+        }
+      }
+    }
+
+    p {
+      display: inline-block;
+
+      a {
+        color: $brand-main;
+        font-size: 16px;
+        margin-left: 35px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  display: none;
+}
+
+.header-controls {
+  @include media-breakpoint-up('md') {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  .user-control {
+    @include media-breakpoint-up('md') {
+      font-size: 22px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    margin-top: 46px;
+
+    .logo {
+      font-size: 20px;
+      color: $brand-main;
+      padding-right: 40px;
+    }
+
+    ul {
+      @include media-breakpoint-up('md') {
+        display: inline-block;
+        margin-left: 45px;
+        margin-top: -35px;
+      }
+
+      display: inline-block;
+
+      li {
+        @include media-breakpoint-up('md') {
+          margin-right: 35px;
+          display: inline-block;
+        }
+
+        display: inline-block;
+        margin-right: 20px;
+
+        a {
+          color: $brand-main;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.menu-nav {
+  @include media-breakpoint-up('md') {
+    background-color: transparent;
+  }
+
+  background-color: $brand-main;
+  width: 100%;
+  height: 50px;
+
+  input {
+    &[type='text'] {
+      @include media-breakpoint-up('md') {
+        width: 254px;
+        height: 41px;
+        border: 1px solid #ccc;
+        color: $brand-main;
+        padding-left: 35px;
+        text-transform: capitalize;
+        font-size: 16px;
+      }
+
+      width: 227px;
+      height: 35px;
+      padding: 10px;
+      text-transform: lowercase;
+      background: transparent;
+      border: 1px solid $white;
+      color: $white;
+      font-family: 'Roboto';
+    }
+  }
+
+  button {
+    &[type='submit'] {
+      @include media-breakpoint-up('md') {
+        color: $brand-main;
+        font-size: 18px;
+        right: 220px;
+      }
+
+      border: 0;
+      background: transparent;
+      color: $white;
+      font-size: 16px;
+      position: absolute;
+      right: 14px;
+      top: 4px;
+    }
+  }
+
+  .menu-bars {
+    font-size: 28px;
+    color: $white;
+  }
+
+  form {
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+    position: relative;
+  }
+}
+
+.home-page {
+  @include media-breakpoint-up('md') {
+    background: url('/img/banner/banner.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
+
+  .header-contact {
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>LookBook</title>
+
+  <link
+    rel="stylesheet"
+    href="/css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"
+  />
+</head>
+
+<body>
+  <header class="header">
+    <div class="img-cover">
+      <div class=" user-navigation">
+        <div class="header-contact">
+          <ul>
+            <li>
+              <a
+                href="http://www.youtube.com"
+                title="Youtube"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><i class="fab fa-youtube"></i></a>
+            </li>
+
+            <li>
+              <a
+                href="http://www.twitter.com"
+                title="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+              <a
+                href="http://www.facebook.com"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f"></i></a>
+            </li>
+
+            <li>
+              <a
+                href="http://www.instagram.com"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><i class="fab fa-instagram-square"></i></a>
+            </li>
+          </ul>
+
+          <p>
+            <a
+              href="tel:+44(0)1023456789"
+              title="Call us"
+            >CALL US +44 (0)10 2345 6789</a>
+          </p>
+        </div>
+        <!-- ./ header-contact  -->
+
+        <div class="header-controls">
+          <div class="menu-nav">
+            <div class="cont">
+              <a
+                href=""
+                title="menu"
+                class="menu-bars d-md-none"
+              ><i class="fas fa-bars"></i></a>
+
+
+              <form action="header-search">
+                <div class="search-form">
+
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search"
+                  >
+                  <button type="submit"><i class="fas fa-search icon"></i></button>
+                </div>
+              </form>
+            </div>
+            <!-- ./ menu-nav  -->
+          </div>
+
+
+          <div class="user-control cont">
+            <div class="d-md-none">
+              <a
+                href=""
+                title="homepage"
+                class="logo"
+              >MONOCHROME</a>
+            </div>
+
+            <ul>
+              <li>
+                <a
+                  href="signIn.html"
+                  title="Account"
+                >
+                  <i class="far fa-user"></i>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="wishlist"
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="shoppingbag.html"
+                  title="cart"
+                >
+                  <i class="fas fa-shopping-bag"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- ./user-control  -->
+        </div>
+        <!-- ./ header-controls  -->
+      </div>
+    </div>
+    <!-- ./ img-cover  -->
+
+
+    <nav class="nav">
+      <ul class="cont d-flex justify-content-between">
+        <li>
+          <a
+            href="index.html"
+            title="New Arrivals"
+          >New Arrivals</a>
+        </li>
+
+        <li>
+          <a
+            href="index.html"
+            title="Brands"
+          >Brands</a>
+        </li>
+
+        <li>
+          <a
+            href="menspage.html"
+            title="Men`s"
+          >Men`s</a>
+        </li>
+
+        <li>
+          <a
+            href=""
+            title="Women`s"
+          >Women`s</a>
+        </li>
+
+        <li>
+          <a
+            href=""
+            title="Accessories"
+          >Accessories</a>
+        </li>
+
+        <li>
+          <a
+            href=""
+            title="Lookbook"
+          >Lookbook</a>
+        </li>
+      </ul>
+
+    </nav>
+    <!-- ./ nav  -->
+  </header>
+  <!-- ./ header  -->
+
+  <main class="cont">
+    <h1>STYLE & FIT ADVICE</h1>
+
+    <p>
+      To find the perfect fit and style for you, please provide us with the info
+      bellow and a consultant will contact you for a discussion.
+      This way we can customize your watch on your needs.
+    </p>
+
+    <form action="/">
+      <h2>1.Choose one</h2>
+
+      <div class="pretty p-default p-round">
+        <input
+          type="radio"
+          name="gender"
+          id="male"
+          value="Men's"
+          class="radio-group"
+          checked
+        >
+
+        <div class="state">
+          <label
+            for="male"
+            class="male"
+          >Men's</label>
+        </div>
+      </div>
+
+      <div class="pretty p-default p-round">
+        <input
+          type="radio"
+          name="gender"
+          id="female"
+          value="Women's"
+          class="radio-group"
+        >
+        <div class="state">
+          <label
+            for="female"
+            class="female"
+          >Women's</label>
+        </div>
+
+      </div>
+
+
+
+      <h2>2.What model do you preffer?</h2>
+      <select
+        name="model"
+        id="model"
+        class="model"
+      >
+        <option value="laBohemePetite">LA BOHEME PETITE</option>
+        <option value="laBoheme">LA BOHEME</option>
+        <option value="triomphe">TRIOMPHE</option>
+        <option value="laBohemePetite">LA BOHEME PETITE</option>
+        <option value="leCournnement">LE COURONNEMENT</option>
+      </select>
+
+      <div class="image">
+        <img
+          src="/img/strap.png"
+          alt=""
+        >
+      </div>
+
+      <h2>3. Please give us the size of your wrist</h2>
+      <input
+        type="text"
+        name="size"
+        id="size"
+        class="size-input"
+        placeholder="write your measuring in cm"
+        required
+      >
+
+      <h2>4. Gravation on the back</h2>
+      <input
+        type="text"
+        name="gravation"
+        id="gravation"
+        class="size-input"
+        placeholder="write 10 characters max"
+        maxlength="10"
+      >
+
+      <div class="product-img">
+        <img
+          src="/img/jj-ying-dfjfNu3Q0Yc-unsplash.png"
+          alt=""
+        >
+      </div>
+
+      <h2>5. Anything else you want to add?</h2>
+
+      <textarea
+        name="message"
+        id="message"
+        class="textarea"
+        cols=""
+        rows=""
+      ></textarea>
+
+      <h2>6. Provide us an email to get back to you</h2>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="email-input"
+        placeholder="Email"
+        required
+      >
+
+      <section class="submit-input">
+        <div class="pretty p-default p-round mb-4">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="terms"
+            id="terms"
+            checked
+          > <span class="checkbox-custom"></span>
+          <div class="state">
+            <label
+              for="terms"
+              class="labels"
+            >Ok with
+              <a
+                href=""
+                title="terms"
+              >terms and conditions</a>
+            </label>
+          </div>
+        </div>
+
+        <div class="pretty p-default p-round mt-4">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="news"
+            id="news"
+          > <span class="checkbox-custom"></span>
+
+          <div class="state">
+            <label
+              for="news"
+              class="labels"
+            >Send me news via
+              <a
+                href=""
+                title="email"
+              >email</a>
+            </label>
+          </div>
+
+        </div>
+
+
+        <button type="submit">Submit</button>
+      </section>
+
+    </form>
+
+  </main>
+
+
+
+  <footer class="footer">
+    <section class="footer-info">
+      <div class="cont">
+        <h3 class="d-md-none">How can we help?</h3>
+
+        <div class="footer-navigation">
+          <ul class="d-none d-md-block">
+            <li><a
+                href=""
+                title="call us"
+              >call us</a>
+            </li>
+
+            <li><a
+                href="tel:+44 (0)10 2345 6789"
+                title="+44 (0)10 2345 6789"
+              >+44 (0)10 2345 6789</a>
+            </li>
+
+            <li><a
+                href=""
+                title="email"
+              >EMAIL CUSTOMER CARE</a>
+            </li>
+
+            <li><a
+                href=""
+                title="mobile version"
+              >see mobile version</a>
+            </li>
+          </ul>
+
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a
+                  href=""
+                  title="advice"
+                >style&fit advice</a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="faqs"
+                >faqs</a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="delivery"
+                >delivery</a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="returns"
+                >returns</a>
+              </li>
+            </ul>
+
+            <div class="border d-md-none"></div>
+
+            <ul>
+              <li>
+                <a
+                  href=""
+                  title="about us"
+                >about us</a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="careers"
+                >careers</a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="affiliates"
+                >affiliates</a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  title="advertising"
+                >advertising</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ./footer-navigation  -->
+
+        <div class="terms text-center d-md-none">
+          <ul>
+            <li>
+              <a
+                href=""
+                title="conditions"
+              >terms&conditions</a>
+            </li>
+
+            <li>
+              <a
+                href=""
+                title="privacy"
+              >privacy&cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-subscribe">
+      <div class="cont">
+        <h3 class="d-md-none">Let`s connect!</h3>
+
+        <form action="">
+          <p class="d-md-none">Be the first to receive exclusives offers</p>
+
+          <p> <span>sign up for our newsletter</span></p>
+
+          <label for="email"></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          >
+
+          <button
+            type="submit"
+            class="mt-4"
+          >Submit</button>
+
+          <p class="privacy d-md-none">
+            I agree with <a
+              href=""
+              title="privacy"
+            >Privacy Policy</a> and i want to receive <br> emails from Monochrome
+          </p>
+        </form>
+
+        <div class="footer-social">
+          <p class="d-md-none">We are highly likeable</p>
+
+          <ul>
+            <li>
+              <a
+                href="http://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="youtube"
+              ><i class="fab fa-youtube"></i></a>
+            </li>
+
+            <li>
+              <a
+                href="http://www.twiter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="twiter"
+              ><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+              <a
+                href="http://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="facebook"
+              ><i class="fab fa-facebook"></i></a>
+            </li>
+
+            <li>
+              <a
+                href="http://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="instagram"
+              ><i class="fab fa-instagram-square"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- ./ footer  -->
+
+</body>
+
+</html>

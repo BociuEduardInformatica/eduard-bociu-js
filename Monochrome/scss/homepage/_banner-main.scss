@@ -1,0 +1,25 @@
+.banner-main {
+  @include media-breakpoint-up('md') {
+    display: none;
+  }
+
+  background: url('/img/banner/banner2.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 177px;
+  position: relative;
+
+  button {
+    &[type='submit'] {
+      position: absolute;
+      top: 120px;
+      left: 280px;
+      width: 80px;
+      height: 25px;
+      border: 0;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-size: 12px;
+    }
+  }
+}

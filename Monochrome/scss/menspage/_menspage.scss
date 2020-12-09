@@ -1,0 +1,46 @@
+.copy {
+  margin-top: 50px;
+  margin-bottom: 130px;
+
+  h2 {
+    font-size: 35px;
+  }
+
+  p {
+    font-family: 'Roboto';
+    font-weight: 300;
+    line-height: 33px;
+    color: $gray-secondary;
+    font-size: 25px;
+  }
+}
+
+.sort-nav {
+  margin-bottom: 48px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      display: inline-block;
+      min-width: 15%;
+
+      a {
+        display: block;
+        text-align: center;
+        padding: 12px 0;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        color: $brand-main;
+        transition: color 0.2s linear, background-color 0.2s linear;
+
+        &:hover {
+          text-decoration: none;
+          background-color: $brand-main;
+          color: $white;
+        }
+      }
+    }
+  }
+}

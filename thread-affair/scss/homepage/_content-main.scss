@@ -1,0 +1,23 @@
+.content-main {
+  & > :nth-child(2) {
+    header {
+      @include media-breakpoint-up('md') {
+        display: block;
+      }
+
+      display: none;
+    }
+
+    .product-tile {
+      @include media-breakpoint-up('md') {
+        display: block;
+      }
+
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+}

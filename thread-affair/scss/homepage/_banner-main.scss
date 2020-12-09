@@ -1,0 +1,84 @@
+.banner-main {
+  background: url('/img/banners/banner-02.jpg') no-repeat center center;
+  background-size: cover;
+  height: 716px;
+  color: $white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+  position: relative;
+
+  & > div {
+    &:first-child {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+    }
+  }
+
+  h1 {
+    @include media-breakpoint-up('md') {
+      font-size: 75px;
+      margin-bottom: 12px;
+    }
+
+    font-size: 49px;
+    line-height: 52px;
+    margin: 0;
+  }
+
+  h2 {
+    @include media-breakpoint-up('md') {
+      font-size: 42px;
+    }
+
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+  }
+
+  .banner-copy {
+    @include media-breakpoint-up('md') {
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      margin: 0;
+    }
+
+    margin: 40px 0 75px 0;
+
+    p {
+      @include media-breakpoint-up('md') {
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-size: 14px;
+      }
+
+      display: none;
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 auto;
+      width: 75%;
+
+      &:first-child {
+        display: block;
+
+        span {
+          @include media-breakpoint-up('md') {
+            font-size: 14px;
+          }
+
+          font-size: 24px;
+          display: block;
+        }
+      }
+    }
+  }
+}

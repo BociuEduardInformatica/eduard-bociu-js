@@ -1,0 +1,36 @@
+.catalog-preview {
+  text-align: center;
+
+  header {
+    h1 {
+      @include media-breakpoint-up('md') {
+        text-align: center;
+        font-size: 41px;
+        color: $gray-secondary;
+        font-weight: 300;
+        text-transform: capitalize;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      text-transform: uppercase;
+      color: $brand-main;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .product-tiles {
+    @include media-breakpoint-up('md') {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

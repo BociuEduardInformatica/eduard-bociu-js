@@ -1,0 +1,30 @@
+$fa-font-path: '/fonts';
+
+@import './../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/solid';
+// site fonts
+@import './fonts';
+
+// bootstrap
+@import './../node_modules/bootstrap/scss/bootstrap-reboot';
+@import './../node_modules/bootstrap/scss/utilities';
+
+// project reset
+@import './reset';
+@import './variables';
+@import './common';
+
+@import './shared/index';
+@import './homepage/index';
+@import './category/index';
+@import './menspage/index';
+@import './productpage/index';
+@import './shoppingbag/index';
+@import './lookBokk/lookBook';
+
+body {
+  font-family: 'PlayfairDisplay';
+  color: $brand-main;
+}

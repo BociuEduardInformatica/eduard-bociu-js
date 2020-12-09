@@ -1,0 +1,237 @@
+.footer {
+  @include media-breakpoint-up('md') {
+    background-color: $gray-main;
+    height: 249px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 130px;
+  }
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  .footer-info {
+    @include media-breakpoint-up('md') {
+      background-color: transparent;
+
+      .footer-navigation {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin-left: 300px;
+        margin-top: 40px;
+
+        ul {
+          display: block;
+
+          li {
+            display: block;
+            line-height: 37px;
+
+            a {
+              color: $brand-main;
+              font-size: 20px;
+              text-transform: lowercase;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    background-color: $gray-secondary;
+    width: 100%;
+
+    h3 {
+      color: $white;
+      font-size: 22px;
+      margin-top: 33px;
+      margin-bottom: 41px;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .footer-nav {
+      @include media-breakpoint-up('md') {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+      }
+
+      display: flex;
+      flex-direction: row-reverse;
+
+      ul {
+        @include media-breakpoint-up('md') {
+          display: inline-block;
+          text-align: left;
+          margin-left: 170px;
+        }
+
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        li {
+          @include media-breakpoint-up('md') {
+            line-height: 37px;
+          }
+
+          display: block;
+          line-height: 40px;
+
+          a {
+            @include media-breakpoint-up('md') {
+              color: $brand-main;
+              font-size: 20px;
+              font-family: 'PlayfairDisplay';
+            }
+
+            color: $white;
+            font-family: 'Roboto';
+            font-size: 16px;
+          }
+        }
+      }
+
+      .border {
+        border: 1px solid $gray-main;
+        margin-left: 15px;
+      }
+    }
+
+    .terms {
+      display: block;
+
+      ul {
+        margin: 30px 0;
+      }
+
+      a {
+        color: $white;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-subscribe {
+  @include media-breakpoint-up('md') {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    max-width: 263px;
+    margin-right: 250px;
+    margin-top: 30px;
+  }
+
+  background-color: $gray-main;
+  width: 100%;
+  margin-bottom: 46px;
+
+  h3 {
+    font-size: 22px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    font-family: 'Roboto';
+    text-align: center;
+    margin-bottom: -15px;
+
+    & span {
+      @include media-breakpoint-up('md') {
+        display: block;
+        font-family: 'PlayfairDisplay';
+        font-size: 22px;
+      }
+
+      display: none;
+    }
+  }
+
+  input {
+    &[type='email'] {
+      display: block;
+      border: 1px solid #ccc;
+      width: 260px;
+      height: 34px;
+      font-family: 'Roboto';
+      font-size: 12px;
+      padding: 10px;
+      margin: 0 auto;
+    }
+  }
+
+  button {
+    @include media-breakpoint-up('md') {
+      margin: 0;
+    }
+
+    display: flex;
+    margin: 0 auto;
+
+    &[type='submit'] {
+      @include media-breakpoint-up('md') {
+        width: 75px;
+        height: 25px;
+        font-size: 12px;
+        padding: 3px 15px;
+      }
+
+      border: 1px solid $brand-main;
+      background: transparent;
+      font-family: 'Roboto';
+      text-transform: uppercase;
+      padding: 5px 15px;
+    }
+  }
+
+  .privacy {
+    font-size: 12px;
+    margin-top: 14px;
+
+    a {
+      color: $brand-main;
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-social {
+  @include media-breakpoint-up('md') {
+    text-align: left;
+  }
+
+  text-align: center;
+
+  p {
+    font-size: 22px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    margin-top: 30px;
+  }
+
+  ul {
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      margin: 30px 19px 0 0;
+
+      a {
+        color: $brand-main;
+        font-size: 25px;
+      }
+    }
+  }
+}

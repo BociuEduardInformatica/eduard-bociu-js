@@ -1,0 +1,72 @@
+.footer-main {
+  background-color: #1b1927;
+  color: $gray-tertiary;
+
+  .footer-nav {
+    @include media-breakpoint-up('md') {
+      display: block;
+
+      ul {
+        display: inline-block;
+        margin-right: 60px;
+
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    ul {
+      margin-bottom: 43px;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    a {
+      font-size: 14px;
+      color: $gray-tertiary;
+    }
+  }
+
+  .footer-support {
+    ul {
+      width: 200px;
+    }
+
+    a {
+      color: $gray-tertiary;
+      font-size: 14px;
+
+      i {
+        color: $brand-main;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .footer-contact {
+    p {
+      &:last-child {
+        font-size: 14px;
+
+        a {
+          display: block;
+
+          &:first-child {
+            color: $gray-tertiary;
+          }
+
+          &:last-child {
+            color: $brand-main;
+          }
+        }
+      }
+    }
+  }
+}

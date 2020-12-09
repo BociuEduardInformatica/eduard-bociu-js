@@ -1,0 +1,25 @@
+.catalog-preview {
+  text-align: center;
+
+  .border {
+    @include media-breakpoint-up('md') {
+      width: 1356px;
+    }
+
+    display: inline-block;
+    align-items: center;
+    border: 1px solid $gray-secondary;
+    width: 306px;
+    margin-top: 26px;
+  }
+
+  h1 {
+    @include media-breakpoint-up('md') {
+      font-size: 35px;
+    }
+
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
