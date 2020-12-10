@@ -66,3 +66,20 @@ controls.addEventListener('click', (event) => {
       break;
   }
 });
+
+window.addEventListener('keydown', (event) => {
+  let axis = 'x';
+  let normalizedDirection = 'fw';
+
+  switch (event.code) {
+    case 'ArrowRight':
+      break;
+    case 'ArrowDown':
+      axis = 'y';
+      break;
+    default:
+      break;
+  }
+
+  moveHero(axis, normalizedDirection);
+});
