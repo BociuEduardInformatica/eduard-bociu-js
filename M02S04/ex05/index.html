@@ -1,37 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=\, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta
+    name="viewport"
+    content="width=\, initial-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
   <title>Form Validation</title>
 </head>
+
 <body>
   <form id="personForm">
     <fieldset>
       <legend>Persoana</legend>
       <label for="name">*Nume:</label>
-      <input type="text" name="name" placeholder="Nume"> 
-        
+      <input
+        type="text"
+        name="name"
+        placeholder="Nume"
+        required
+      >
+
       <br><br>
 
       <label for="surname">*Prenume:</label>
-      <input type="text" name="surname" placeholder="Prenume"> 
+      <input
+        type="text"
+        name="surname"
+        placeholder="Prenume"
+        required
+      >
 
       <br><br>
 
       <label for="age">*Email: </label>
-      <input type="email" name="email" placeholder="Email"> 
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+      >
 
       <br><br>
 
       <label for="age">*Varsta: </label>
-      <input type="text" name="age" placeholder="Varsta">    
-      
+      <input
+        type="text"
+        name="age"
+        placeholder="Varsta"
+        required
+      >
+
       <br><br>
 
       <button type="submit">Adauga</button>
     </fieldset>
   </form>
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
