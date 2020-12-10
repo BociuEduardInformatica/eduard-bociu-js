@@ -1,15 +1,28 @@
 const controls = document.querySelector('.controls');
 const hero = document.querySelector('.hero');
+const heroDimensions = hero.getBoundingClientRect();
+const stage = document.querySelector('.stage');
+const stageDimensions = stage.getBoundingClientRect();
 const heroPosition = {
   left: 0,
   top: 0,
 };
+const boundaryRight = stageDimensions.width;
+const boundaryBottom = stageDimensions.height;
 
 const moveHero = (axis = 'x', normalizedDirection = 'fw') => {
   let step = normalizedDirection === 'fw' ? 30 : -30;
   let cssProperty = axis === 'x' ? 'left' : 'top';
 
   heroPosition[cssProperty] += step;
+
+  if (heroPosition[cssProperty] <= 0) {
+    heroPosition[cssProperty] = 0;
+  }
+
+  if (axis === 'x' && heroPosition[cssProperty] - hero.width >= boundaryRight) {
+    heroPosition[cssProperty] = boundaryRight - hero.width;
+  }
 
   hero.style.left = `${heroPosition.left}px`;
   hero.style.top = `${heroPosition.top}px`;
