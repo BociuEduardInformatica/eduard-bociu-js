@@ -24,6 +24,10 @@ const moveHero = (axis = 'x', normalizedDirection = 'fw') => {
     heroPosition[cssProperty] = boundaryRight;
   }
 
+  if (axis === 'y' && heroPosition[cssProperty] >= boundaryBottom) {
+    heroPosition[cssProperty] = boundaryBottom;
+  }
+
   hero.style.left = `${heroPosition.left}px`;
   hero.style.top = `${heroPosition.top}px`;
 };
