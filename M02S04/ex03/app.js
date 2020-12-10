@@ -7,8 +7,8 @@ const heroPosition = {
   left: 0,
   top: 0,
 };
-const boundaryRight = stageDimensions.width;
-const boundaryBottom = stageDimensions.height;
+const boundaryRight = stageDimensions.width - heroDimensions.width;
+const boundaryBottom = stageDimensions.height - heroDimensions.height;
 
 const moveHero = (axis = 'x', normalizedDirection = 'fw') => {
   let step = normalizedDirection === 'fw' ? 30 : -30;
@@ -20,8 +20,8 @@ const moveHero = (axis = 'x', normalizedDirection = 'fw') => {
     heroPosition[cssProperty] = 0;
   }
 
-  if (axis === 'x' && heroPosition[cssProperty] - hero.width >= boundaryRight) {
-    heroPosition[cssProperty] = boundaryRight - hero.width;
+  if (axis === 'x' && heroPosition[cssProperty] >= boundaryRight) {
+    heroPosition[cssProperty] = boundaryRight;
   }
 
   hero.style.left = `${heroPosition.left}px`;
