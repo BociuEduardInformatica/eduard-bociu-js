@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "@glidejs/glide": "^3.4.1",
     "bootstrap": "^4.5.0"
   }
 }

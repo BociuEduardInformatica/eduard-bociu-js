@@ -39,22 +39,24 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-  return gulp
-    .src(['./js/**/*.js'])
-    .pipe(
-      eslint({
-        useEslintrc: true,
-        configFile: './config/.eslintrc',
-      }),
-    )
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(concat('app.min.js'))
-    .pipe(mode.production(uglify()))
-    .pipe(mode.production(maps.init()))
-    .pipe(mode.production(maps.write('./')))
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(connect.reload());
+  return (
+    gulp
+      .src(['./node_modules/@glidejs/glide/dist/glide.js', './js/**/*.js'])
+      // .pipe(
+      //   eslint({
+      //     useEslintrc: true,
+      //     configFile: './config/.eslintrc',
+      //   }),
+      // )
+      .pipe(eslint.format())
+      .pipe(eslint.failAfterError())
+      .pipe(concat('app.min.js'))
+      .pipe(mode.production(uglify()))
+      .pipe(mode.production(maps.init()))
+      .pipe(mode.production(maps.write('./')))
+      .pipe(gulp.dest('./dist/js'))
+      .pipe(connect.reload())
+  );
 });
 
 gulp.task('html', function () {
