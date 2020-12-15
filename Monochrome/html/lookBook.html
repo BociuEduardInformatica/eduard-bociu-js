@@ -272,24 +272,32 @@
       </div>
 
       <h2>3. Please give us the size of your wrist</h2>
-      <input
-        type="text"
-        name="size"
-        id="size"
-        class="size-input"
-        placeholder="write your measuring in cm"
-        required
-      >
+      <div class="form-group">
+        <input
+          type="number"
+          name="size"
+          id="size"
+          class="size-input form-control"
+          placeholder="write your measuring in cm"
+          required
+        >
+      </div>
+
 
       <h2>4. Gravation on the back</h2>
-      <input
-        type="text"
-        name="gravation"
-        id="gravation"
-        class="size-input"
-        placeholder="write 10 characters max"
-        maxlength="10"
-      >
+      <div class="form-group">
+        <input
+          type="text"
+          name="gravation"
+          id="gravation"
+          class="size-input form-control"
+          placeholder="write 10 characters max"
+          minlength="3"
+          maxlength="10"
+          required
+        >
+      </div>
+
 
       <div class="product-img">
         <img
@@ -300,34 +308,40 @@
 
       <h2>5. Anything else you want to add?</h2>
 
-      <textarea
-        name="message"
-        id="message"
-        class="textarea"
-        cols=""
-        rows=""
-      ></textarea>
+      <div class="form-group">
+        <textarea
+          name="message"
+          id="message"
+          class="textarea form-control"
+          cols=""
+          rows=""
+        ></textarea>
+      </div>
+
 
       <h2>6. Provide us an email to get back to you</h2>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="email-input"
-        placeholder="Email"
-        required
-      >
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="email-input form-control"
+          placeholder="Email"
+          required
+        >
+      </div>
+
 
       <section class="submit-input">
-        <div class="pretty p-default p-round mb-4">
-          <input
-            class="checkbox"
-            type="checkbox"
-            name="terms"
-            id="terms"
-            checked
-          > <span class="checkbox-custom"></span>
-          <div class="state">
+        <div class="p-default p-round mb-4">
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="checkbox"
+              name="terms"
+              id="terms"
+              required
+            >
             <label
               for="terms"
               class="labels"
@@ -340,15 +354,15 @@
           </div>
         </div>
 
-        <div class="pretty p-default p-round mt-4">
-          <input
-            class="checkbox"
-            type="checkbox"
-            name="news"
-            id="news"
-          > <span class="checkbox-custom"></span>
+        <div class="p-default p-round mt-4">
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="checkbox"
+              name="news"
+              id="news"
+            >
 
-          <div class="state">
             <label
               for="news"
               class="labels"

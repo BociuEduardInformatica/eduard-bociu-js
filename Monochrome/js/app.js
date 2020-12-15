@@ -8,5 +8,11 @@ if (lookbookPage !== null) {
 
   if (form !== null) {
     pristine = new Pristine(form);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      pristine.validate();
+    });
   }
 }
