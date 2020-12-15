@@ -20,7 +20,7 @@
   />
 </head>
 
-<body>
+<body class="monochrome-lookbook">
   <header class="header">
     <div class="img-cover">
       <div class=" user-navigation">
@@ -204,7 +204,10 @@
       This way we can customize your watch on your needs.
     </p>
 
-    <form action="/">
+    <form
+      action="/"
+      class="form-lookbook"
+    >
       <h2>1.Choose one</h2>
 
       <div class="pretty p-default p-round">
@@ -249,7 +252,9 @@
         name="model"
         id="model"
         class="model"
+        required
       >
+        <option value="">--select--</option>
         <option value="laBohemePetite">LA BOHEME PETITE</option>
         <option value="laBoheme">LA BOHEME</option>
         <option value="triomphe">TRIOMPHE</option>
@@ -281,6 +286,7 @@
         id="gravation"
         class="size-input"
         placeholder="write 10 characters max"
+        minlength="3"
         maxlength="10"
       >
 
@@ -318,7 +324,7 @@
             type="checkbox"
             name="terms"
             id="terms"
-            checked
+            required
           > <span class="checkbox-custom"></span>
           <div class="state">
             <label
