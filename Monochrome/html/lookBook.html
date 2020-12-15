@@ -20,7 +20,7 @@
   />
 </head>
 
-<body>
+<body class="monochrome-lookbook">
   <header class="header">
     <div class="img-cover">
       <div class=" user-navigation">
@@ -204,7 +204,10 @@
       This way we can customize your watch on your needs.
     </p>
 
-    <form action="/">
+    <form
+      action="/"
+      class="form-lookbook"
+    >
       <h2>1.Choose one</h2>
 
       <div class="pretty p-default p-round">
@@ -245,17 +248,21 @@
 
 
       <h2>2.What model do you preffer?</h2>
-      <select
-        name="model"
-        id="model"
-        class="model"
-      >
-        <option value="laBohemePetite">LA BOHEME PETITE</option>
-        <option value="laBoheme">LA BOHEME</option>
-        <option value="triomphe">TRIOMPHE</option>
-        <option value="laBohemePetite">LA BOHEME PETITE</option>
-        <option value="leCournnement">LE COURONNEMENT</option>
-      </select>
+      <div class="form-group">
+        <select
+          name="model"
+          id="model"
+          class="model form-control"
+          required
+        >
+          <option value="">--select--</option>
+          <option value="laBohemePetite">LA BOHEME PETITE</option>
+          <option value="laBoheme">LA BOHEME</option>
+          <option value="triomphe">TRIOMPHE</option>
+          <option value="laBohemePetite">LA BOHEME PETITE</option>
+          <option value="leCournnement">LE COURONNEMENT</option>
+        </select>
+      </div>
 
       <div class="image">
         <img
