@@ -5,6 +5,7 @@ $(() => {
       method: 'GET',
     }).done((response) => {
       let $ul = $(`.${ulClass}`);
+      $ul.remove();
 
       if ($ul.length === 0) {
         $ul = $('<ul>', {
@@ -18,20 +19,15 @@ $(() => {
         const $li = $('<li>', {
           text: person.name,
         });
-
         const $skillsUl = $('<ul>');
-
         person.skills.forEach((skill) => {
           $('<li>', {
             text: skill,
           }).appendTo($skillsUl);
         });
-
         $li.append($skillsUl);
-
         $ul.append($li);
       });
-
       $ul.appendTo('body');
     });
   };
@@ -48,13 +44,15 @@ $(() => {
 
   $form
     .on('click', '.addSkill', (event) => {
-      const $delegatedTarget = $(event.currentTarget);
-      const buttonTarget = $delegatedTarget.parent();
-      const skillValue = $delegatedTarget.prev().val();
+      const $delegateTarget = $(event.currentTarget);
+      const $buttonParent = $delegateTarget.parent(); // parentElement <- DOM
+      const skillValue = $delegateTarget.prev().val();
 
       if (skillValue.length < 1) {
         return;
       }
+
+      requestBody.person.skills.push(skillValue);
 
       let $skillsUl = $('.skillsUl');
       let $skillLi = $('<li>', {
@@ -66,18 +64,15 @@ $(() => {
           class: 'skillsUl',
         });
 
-        $skillsUl.append($skillLi).appendTo(buttonTarget);
+        $skillsUl.append($skillLi).appendTo($buttonParent);
       } else {
         $skillsUl.append($skillLi);
       }
 
-      $delegatedTarget.prev().val('');
-
-      requestBody.person.skills.push(skillValue);
+      $delegateTarget.prev().val(''); // domNode.value='' <- DOM
     })
     .on('submit', (event) => {
       event.preventDefault();
-
       const $nameInput = $(event.target).find('input[name="name"]');
       requestBody.person.name = $nameInput.val();
 
@@ -85,9 +80,13 @@ $(() => {
         $nameInput.val('');
         $('.skillsUl').empty();
         requestBody = {
-          person: { name: '', skills: [] },
+          person: {
+            name: '',
+            skills: [],
+          },
         };
         buildPersonList();
       });
     });
+  // $form[0].addEvenListener
 });
