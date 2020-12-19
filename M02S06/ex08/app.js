@@ -1,3 +1,16 @@
+axios.interceptors.request.use((config) => {
+  const { url, method, data } = config;
+
+  if (url.includes('/persons') && method === 'post') {
+    data.person.name = data.person.name.toUpperCase();
+  }
+
+  return config;
+}),
+  (error) => {
+    return Promise.reject(error);
+  };
+
 $(() => {
   const buildPersonList = () => {
     const ulClass = 'person-list';

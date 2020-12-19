@@ -20,3 +20,24 @@ let age1 = {
 let age2 = {
   age: 25,
 };
+
+let fullPerson1 = {
+  ...person1,
+  ...age1,
+};
+
+let fullPerson2 = {
+  ...person2,
+  ...{ age: 40 },
+};
+
+let fullPerson1 = {
+  ...person1,
+  ...{ age: 23 },
+};
+
+let fullPerson4 = {
+  ...{ name: 'Anita' },
+  ...person2.surname,
+  ...{ age: 36 },
+};
